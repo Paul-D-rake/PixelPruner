@@ -8,7 +8,7 @@ import subprocess
 import zipfile
 from datetime import datetime
 import webbrowser
-import winsound
+# import winsound
 
 def resource_path(relative_path):
     """ Get absolute path to resource, works for dev and for PyInstaller """
@@ -426,8 +426,8 @@ class PixelPruner:
         self.update_cropped_images_counter()
 
         # Play crop sound if enabled
-        if self.crop_sound_var.get():
-            winsound.PlaySound(resource_path("click.wav"), winsound.SND_FILENAME | winsound.SND_ASYNC)
+        #if self.crop_sound_var.get():
+        #    winsound.PlaySound(resource_path("click.wav"), winsound.SND_FILENAME | winsound.SND_ASYNC)
 
         # Create thumbnail and update crops canvas
         self.update_crops_canvas(cropped, cropped_filepath)
