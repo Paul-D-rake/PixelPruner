@@ -280,7 +280,7 @@ class PixelPruner:
         if PILLOW_VERSION >= "7.0.0":
             resampling_filter = Image.LANCZOS
         else:
-            resampling_filter = Image.ANTIALIAS
+            resampling_filter = Image.Resampling.LANCZOS
 
         self.tkimage = ImageTk.PhotoImage(self.current_image.resize((self.scaled_width, self.scaled_height), resampling_filter))
 
