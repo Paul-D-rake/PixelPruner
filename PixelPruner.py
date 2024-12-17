@@ -419,8 +419,13 @@ class PixelPruner:
         image_path = self.images[self.image_index]
         base_filename = os.path.basename(image_path)
         filename, ext = os.path.splitext(base_filename)
-        cropped_filename = f"cropped_{self.crop_counter}_{filename}.png"
+        # Ensure filename is only the base name
+        base_filename = os.path.basename(filename)
+        cropped_filename = f"cropped_{self.crop_counter}_{base_filename}.png"
+
+        # Generate the full output path
         cropped_filepath = os.path.join(self.output_folder, cropped_filename).replace("/", "\\")
+
         cropped.save(cropped_filepath, "PNG")
         self.cropped_images.insert(0, cropped_filepath)  # Insert at the beginning of the list
         self.update_cropped_images_counter()
