@@ -100,7 +100,7 @@ class PixelPruner:
         tk.Label(control_frame, text="Select crop size:").pack(side=tk.LEFT, padx=(10, 2))
         
         self.size_var = tk.StringVar()
-        self.size_dropdown = ttk.Combobox(control_frame, textvariable=self.size_var, state="readonly", values=["512x512", "768x768", "1024x1024", "2048x2048"])
+        self.size_dropdown = ttk.Combobox(control_frame, textvariable=self.size_var, state="readonly", values=["512x512", "768x768", "1024x1024", "2048x2048", "1024x1536", "1024x2048"])
         self.size_dropdown.pack(side=tk.LEFT, padx=(2, 20))
         self.size_dropdown.set("512x512")  # Default size
         self.size_dropdown.bind("<<ComboboxSelected>>", self.update_crop_box_size)
