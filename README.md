@@ -59,7 +59,7 @@ Follow these steps to install and run PixelPruner on your local machine.
    Clone the PixelPruner repository from GitHub to your local machine using the following command:
 
    ```sh
-   git clone https://github.com/theallyprompts/PixelPruner.git
+   git clone https://github.com/Davidss2/PixelPrunerLinux.git
    ```
 
 2. **Navigate to the cloned directory**
